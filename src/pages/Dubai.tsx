@@ -11,7 +11,7 @@ const Dubai = () => {
 		duration: "5 Days / 4 Nights",
 		groupSize: "2-25 People",
 		rating: 4.9,
-		price: "From LKR 950000",
+		price: "From LKR 289990",
 		highlights: [
 			"Burj Khalifa",
 			"Desert Safari",

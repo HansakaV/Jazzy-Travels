@@ -11,7 +11,7 @@ const Thailand = () => {
 		duration: "7 Days / 6 Nights",
 		groupSize: "2-25 People",
 		rating: 4.8,
-		price: "From LKR 850000",
+		price: "From LKR 209990 per person",
 		highlights: [
 			"Grand Palace Bangkok",
 			"Phi Phi Islands",

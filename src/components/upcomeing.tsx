@@ -190,6 +190,7 @@ const AdSlider = () => {
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   loop
                   muted
+                  autoPlay
                   playsInline
                   onPlay={handleVideoPlay}
                   onPause={handleVideoPause}

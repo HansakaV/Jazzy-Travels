@@ -9,6 +9,10 @@ import {
 } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Facebook, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import { useState } from "react";
+import Swal from 'sweetalert2'
+
 
 const contactInfo = [
 	{
@@ -42,6 +46,40 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setIsSubmitting(true);
+
+		emailjs.sendForm(
+			"service_x0rj0ps",
+			"template_mojeesi",
+			e.target,
+			"OCYKnTx3g6tKeQIi4"
+		).then(
+			() => {
+				Swal.fire({
+					icon: 'success',
+					title: 'Message sent successfully!',
+					text: 'We will get back to you shortly.',
+				});
+
+				e.target.reset(); // Clear the form
+				setIsSubmitting(false);
+			},
+			(error) => {
+				console.error("EmailJS error:", error);
+				Swal.fire({
+					icon: 'error',
+					title: 'Failed to send message',
+					text: 'Please try again later.',
+				});
+				setIsSubmitting(false);
+			}
+		);
+	};
+
 	return (
 		<section id="contact" className="py-24 bg-muted/20">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,21 +171,48 @@ const Contact = () => {
 								</p>
 							</CardHeader>
 							<CardContent className="p-0">
-								<form className="space-y-6">
+								<form onSubmit={handleSubmit} className="space-y-6">
 									<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-										<Input placeholder="First Name" />
-										<Input placeholder="Last Name" />
+										<Input 
+											name="firstName"
+											placeholder="First Name" 
+											required 
+										/>
+										<Input 
+											name="lastName"
+											placeholder="Last Name" 
+											required 
+										/>
 									</div>
-									<Input type="email" placeholder="Email Address" />
-									<Input type="tel" placeholder="Phone Number" />
-									<Input placeholder="Destination of Interest (e.g., Thailand)" />
+									<Input 
+										type="email" 
+										name="email"
+										placeholder="Email Address" 
+										required 
+									/>
+									<Input 
+										type="tel" 
+										name="phone"
+										placeholder="Phone Number" 
+									/>
+									<Input 
+										name="destination"
+										placeholder="Destination of Interest (e.g., Thailand)" 
+									/>
 									<Textarea
+										name="message"
 										placeholder="Tell us about your travel plans..."
 										className="min-h-[140px]"
+										required
 									/>
-									<Button size="lg" className="w-full text-lg">
+									<Button 
+										type="submit" 
+										size="lg" 
+										className="w-full text-lg"
+										disabled={isSubmitting}
+									>
 										<Send className="h-5 w-5 mr-2" />
-										Send Message
+										{isSubmitting ? "Sending..." : "Send Message"}
 									</Button>
 								</form>
 							</CardContent>

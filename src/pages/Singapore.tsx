@@ -11,7 +11,7 @@ const Singapore = () => {
 		duration: "4 Days / 3 Nights",
 		groupSize: "2-15 People",
 		rating: 4.9,
-		price: "From LKR 650000",
+		price: "From LKR 239990",
 		highlights: [
 			"Marina Bay Sands",
 			"Gardens by the Bay",

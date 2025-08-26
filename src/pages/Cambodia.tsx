@@ -13,7 +13,7 @@ const Cambodia = () => {
 		duration: "6 Days / 5 Nights",
 		groupSize: "2-20 People",
 		rating: 4.8,
-		price: "From LKR 750000",
+		price: "Contact for Pricing",
 		highlights: [
 			"Angkor Wat Temple Complex",
 			"Buddhist Monastery Visits",

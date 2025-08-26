@@ -11,7 +11,7 @@ const Malaysia = () => {
 		duration: "6 Days / 5 Nights",
 		groupSize: "2-20 People",
 		rating: 4.8,
-		price: "From LKR 750000",
+		price: "From LKR 149990 per person",
 		highlights: [
 			"Petronas Twin Towers",
 			"Batu Caves",

@@ -11,7 +11,7 @@ const Indonesia = () => {
 		duration: "8 Days / 7 Nights",
 		groupSize: "2-18 People",
 		rating: 4.7,
-		price: "From LKR 650000",
+		price: "Contact for Pricing",
 		highlights: [
 			"Borobudur Temple at Sunrise",
 			"Active Volcano Trekking",
