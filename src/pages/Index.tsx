@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Destinations from "@/components/Destinations";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Upcomig from "@/components/upcomeing";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <Upcomig />
         <Features />
         <Destinations />
         <Services />

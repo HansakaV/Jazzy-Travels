@@ -29,6 +29,12 @@ const Header = () => {
 		hidden: { opacity: 0, y: -10 },
 		visible: { opacity: 1, y: 0 },
 	};
+	const handleWhatsAppContact = () => {
+		const phoneNumber = "+94710356244"; // Replace with your actual WhatsApp number
+		const message = encodeURIComponent(`Hi! I'm interested. Could you please provide more details?`);
+		const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+		window.open(whatsappUrl, '_blank');
+	};
 
 	return (
 		<motion.header
@@ -60,7 +66,9 @@ const Header = () => {
 							</motion.a>
 						))}
 						<motion.div whileHover={{ scale: 1.05 }}>
-							<Button>Get Quote</Button>
+							<Button 
+							className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white"
+							onClick={handleWhatsAppContact}> WhatsApp </Button>
 						</motion.div>
 					</nav>
 
