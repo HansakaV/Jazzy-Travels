@@ -259,7 +259,7 @@ const Hero = () => {
 	};
 
 	const handleWhatsAppContact = () => {
-		const phoneNumber = "+94710356244";
+		const phoneNumber = "+94773838238";
 		const message = encodeURIComponent(`Hi! I'm interested in ${currentDestination.name}. Could you please provide more details?`);
 		const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 		window.open(whatsappUrl, '_blank');

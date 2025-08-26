@@ -68,7 +68,7 @@ const Indonesia = () => {
 
 	// WhatsApp contact function
 	const handleWhatsAppContact = () => {
-		const phoneNumber = "+94710356244"; // Replace with your actual WhatsApp number
+		const phoneNumber = "+94773838238"; // Replace with your actual WhatsApp number
 		const message = encodeURIComponent(`Hi! I'm interested in the ${indonesiaData.name} package. Could you please provide more details about this cultural adventure?`);
 		const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 		window.open(whatsappUrl, '_blank');
